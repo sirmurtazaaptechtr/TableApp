@@ -1,12 +1,22 @@
 const tab = document.getElementById('tab');
-const dispArea = document.getElementById('dispArea');
+const tableArea = document.getElementById('tableArea');
+const timeArea = document.getElementById('timeArea');
+
 function dispTable()
 {
     let tabNum = tab.value;
-    dispArea.innerHTML = `<h4>Displaying table of ${tabNum}</h4>`;
+    tableArea.innerHTML = `<h4>Displaying table of ${tabNum}</h4>`;
     for(let count = 1;count <= 10;count++)
     {
-        dispArea.innerHTML +=
+        tableArea.innerHTML +=
         `<p>${tabNum} X ${count} = ${tabNum*count}</p>`;
     }
 }
+
+function dispTime() {
+    let dt = new Date();
+    timeArea.innerHTML = dt;
+}
+
+setInterval(dispTime,1000);
+
