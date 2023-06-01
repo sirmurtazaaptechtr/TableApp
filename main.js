@@ -15,7 +15,7 @@ function dispTable()
 
 function dispTime() {
     let dt = new Date();
-    timeArea.innerHTML = dt;
+    timeArea.innerHTML = `<span>${dt}</span>`;
 }
 
 setInterval(dispTime,1000);
